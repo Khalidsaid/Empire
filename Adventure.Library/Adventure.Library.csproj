@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DC468C4-031C-4821-BD04-F804C56E560C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Adventure.Library</RootNamespace>
+    <AssemblyName>Character.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\Fighting\FightBehavior.cs" />
+    <Compile Include="Behaviors\Sounds\SoundBehavior.cs" />
+    <Compile Include="Characters\ACharacter.cs" />
+    <Compile Include="Characters\Archer.cs" />
+    <Compile Include="Area\Area.cs" />
+    <Compile Include="Characters\Factories\CharacterFactory.cs" />
+    <Compile Include="Characters\Knight.cs" />
+    <Compile Include="Characters\Princess.cs" />
+    <Compile Include="Characters\Soldier.cs" />
+    <Compile Include="Commons\Coordinate.cs" />
+    <Compile Include="Environments\Buildings\IBuilding.cs" />
+    <Compile Include="Environments\Outlets\Adjacent.cs" />
+    <Compile Include="Environments\Outlets\IOutlet.cs" />
+    <Compile Include="Environments\Outlets\Tunnel.cs" />
+    <Compile Include="Environments\Zones\IZone.cs" />
+    <Compile Include="Environments\Outlets\Outlet.cs" />
+    <Compile Include="Environments\Zones\Zone.cs" />
+    <Compile Include="Gameboards\IGameboard.cs" />
+    <Compile Include="Gameboards\Factories\IGameboardFactory.cs" />
+    <Compile Include="Gameboards\Factories\GameboardFactory.cs" />
+    <Compile Include="Gameboards\Gameboard.cs" />
+    <Compile Include="Games\GameEnvironment.cs" />
+    <Compile Include="Games\Simulations\Factories\GameSimulationFactory.cs" />
+    <Compile Include="Games\Simulations\Factories\IGameSimulationFactory.cs" />
+    <Compile Include="Games\Simulations\IGameSimulation.cs" />
+    <Compile Include="Games\Simulations\GameSimulation.cs" />
+    <Compile Include="Items\AItems.cs" />
+    <Compile Include="Observers\IObservable.cs" />
+    <Compile Include="Observers\IObserver.cs" />
+    <Compile Include="Organisations\Organisation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Environments\Adapters\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Items\Lootable\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

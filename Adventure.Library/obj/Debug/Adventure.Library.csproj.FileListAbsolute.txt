@@ -1,0 +1,5 @@
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Library\bin\Debug\Character.Library.dll
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Library\bin\Debug\Character.Library.pdb
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Library\obj\Debug\Adventure.Library.csprojResolveAssemblyReference.cache
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Library\obj\Debug\Character.Library.dll
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Library\obj\Debug\Character.Library.pdb

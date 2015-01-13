@@ -1,0 +1,20 @@
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.exe.config
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.exe
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.pdb
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.dll
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\bin\Debug\Character.Library.dll
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.pdb
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\bin\Debug\Character.Library.pdb
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.csprojResolveAssemblyReference.cache
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.exe
+C:\Users\a572195\Desktop\Adventure-Patterns-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.pdb
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.exe.config
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.exe
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.pdb
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.dll
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\bin\Debug\Character.Library.dll
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.pdb
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\bin\Debug\Character.Library.pdb
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.csprojResolveAssemblyReference.cache
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.exe
+C:\Users\a572195\Desktop\Adventure-Patterns-master last\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.pdb
