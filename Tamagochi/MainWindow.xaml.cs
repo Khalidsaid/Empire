@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Tamagochi
 {
@@ -68,6 +69,23 @@ namespace Tamagochi
                 characterFactory.CreateCharacter<Soldier>(areaRabbit,"Buggs Bunny"),
                 characterFactory.CreateCharacter<Soldier>(areaBoar,"Pumba")
             };
+            string a=System.IO.Directory.GetCurrentDirectory();
+            CreateImage(areaKnihgt, Directory.GetCurrentDirectory()+@".\..\..\Images\knight.gif");
+            CreateImage(areaSoldier, Directory.GetCurrentDirectory() + @"\..\..\Images\soldier.gif");
+            CreateImage(areaArcher, Directory.GetCurrentDirectory() + @"\..\..\Images\archer.gif");
+
+        }
+
+        public void CreateImage(Area area,String imgUrl)
+        {
+            Image image = new Image();
+            image.Width = 50;
+            image.Height = 50;
+            ImageSource imageSource = new BitmapImage(new Uri(imgUrl));
+            image.Source = imageSource;
+            Grid.SetRow(image, area.Row);
+            Grid.SetColumn(image, area.Column);
+            grid.Children.Add(image);
         }
     }
 }

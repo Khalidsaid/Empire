@@ -8,8 +8,8 @@ namespace Adventure.Library
    
    public class Area
     {
-        int Row { get; set; }
-        int Column { get; set; }
+       public int Row { get; set; }
+       public int Column { get; set; }
 
         public Area(int row, int column)
         {

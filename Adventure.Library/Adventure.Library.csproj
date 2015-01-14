@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,14 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Area\Area.cs" />
     <Compile Include="Behaviors\Fighting\FightBehavior.cs" />
     <Compile Include="Behaviors\Sounds\SoundBehavior.cs" />
     <Compile Include="Characters\ACharacter.cs" />
     <Compile Include="Characters\Archer.cs" />
-    <Compile Include="Area\Area.cs" />
+    <Compile Include="Characters\Boar.cs" />
     <Compile Include="Characters\Factories\CharacterFactory.cs" />
     <Compile Include="Characters\Knight.cs" />
     <Compile Include="Characters\Princess.cs" />
+    <Compile Include="Characters\Rabbit.cs" />
     <Compile Include="Characters\Soldier.cs" />
     <Compile Include="Commons\Coordinate.cs" />
     <Compile Include="Environments\Buildings\IBuilding.cs" />
