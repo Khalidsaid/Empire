@@ -26,11 +26,17 @@ namespace Tamagochi
     {
 
         public List<Area> arrayAreas = new List<Area>();
+        Area areaKnihgt;
+        Image imageKnight = new Image();
+        Image imageSoldier = new Image();
+        Image imageArcher = new Image();
+        Image imageRabbit = new Image();
+        Image imageBoar = new Image();
         public MainWindow()
         {
             InitializeComponent();
             var characterFactory = new CharacterFactory();
-            Area areaKnihgt = new Area();
+            areaKnihgt = new Area();
             areaKnihgt.SetInitialArea();
             arrayAreas.Add(areaKnihgt);
             
@@ -70,15 +76,16 @@ namespace Tamagochi
                 characterFactory.CreateCharacter<Soldier>(areaBoar,"Pumba")
             };
             string a=System.IO.Directory.GetCurrentDirectory();
-            CreateImage(areaKnihgt, Directory.GetCurrentDirectory()+@".\..\..\Images\knight.gif");
-            CreateImage(areaSoldier, Directory.GetCurrentDirectory() + @"\..\..\Images\soldier.gif");
-            CreateImage(areaArcher, Directory.GetCurrentDirectory() + @"\..\..\Images\archer.gif");
+            CreateImage(imageKnight,areaKnihgt, Directory.GetCurrentDirectory()+@".\..\..\Images\knight.gif");
+            CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @"\..\..\Images\soldier.gif");
+            CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @"\..\..\Images\archer.gif");
+            CreateImage(imageRabbit, areaRabbit, Directory.GetCurrentDirectory() + @"\..\..\Images\rabbit.gif");
+            CreateImage(imageBoar, areaBoar, Directory.GetCurrentDirectory() + @"\..\..\Images\boar.gif");
 
         }
 
-        public void CreateImage(Area area,String imgUrl)
+        public void CreateImage(Image image, Area area,String imgUrl)
         {
-            Image image = new Image();
             image.Width = 50;
             image.Height = 50;
             ImageSource imageSource = new BitmapImage(new Uri(imgUrl));
@@ -87,5 +94,41 @@ namespace Tamagochi
             Grid.SetColumn(image, area.Column);
             grid.Children.Add(image);
         }
+
+        public void Move(Area area,int row,int column)
+        {
+            area.Row += 1;
+            area.Column += 1;
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            grid.Children.Remove(imageKnight);
+            if (e.Key == Key.Up)
+            {
+                if (areaKnihgt.Row > 0)
+                    areaKnihgt.Row -= 1;
+            }
+            if (e.Key == Key.Down)
+            {
+                if (areaKnihgt.Row < 9)
+                    areaKnihgt.Row += 1;
+            }
+            if (e.Key == Key.Left)
+            {
+                if (areaKnihgt.Column > 0)
+                    areaKnihgt.Column -= 1;
+            }
+            if (e.Key == Key.Right)
+            {
+                if (areaKnihgt.Column < 9)
+                    areaKnihgt.Column += 1;
+            }
+            CreateImage(imageKnight, areaKnihgt, Directory.GetCurrentDirectory() + @".\..\..\Images\knight.gif");
+        }
+       
+
+     
+       
     }
 }
