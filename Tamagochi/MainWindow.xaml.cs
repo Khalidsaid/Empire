@@ -23,17 +23,38 @@ namespace Tamagochi
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public List<Area> arrayAreas = new List<Area>();
         public MainWindow()
         {
             InitializeComponent();
-
             var characterFactory = new CharacterFactory();
+            Area areaKnihgt = new Area();
+            areaKnihgt.SetInitialArea();
+            arrayAreas.Add(areaKnihgt);
+            
+
+            Area areaKPrincess = new Area();
+            areaKPrincess.SetInitialArea();
+            areaKPrincess.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaKPrincess);
+
+            Area areaSoldier = new Area();
+            areaSoldier.SetInitialArea();
+            areaSoldier.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaSoldier);
+
+            Area areaArcher = new Area();
+            areaArcher.SetInitialArea();
+            areaArcher.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaArcher);
 
             var characters = new List<ACharacter>(){
-                characterFactory.CreateCharacter<Knight>(new Area(1,1), "Aragorn"),
-                characterFactory.CreateCharacter<Princess>(new Area(1,2),"Arwen"),
-                characterFactory.CreateCharacter<Soldier>(new Area(1,3),"Gimli"),
-                characterFactory.CreateCharacter<Archer>(new Area(1,4),"Legolas")
+               
+                characterFactory.CreateCharacter<Knight>(areaKnihgt, "Aragorn"),
+                characterFactory.CreateCharacter<Princess>(areaKPrincess,"Arwen"),
+                characterFactory.CreateCharacter<Soldier>(areaSoldier,"Gimli"),
+                characterFactory.CreateCharacter<Archer>(areaArcher,"Legolas")
             };
         }
     }
