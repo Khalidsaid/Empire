@@ -49,12 +49,24 @@ namespace Tamagochi
             areaArcher.ModifyAreaIfExist(arrayAreas);
             arrayAreas.Add(areaArcher);
 
+            Area areaRabbit = new Area();
+            areaRabbit.SetInitialArea();
+            areaRabbit.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaRabbit);
+
+            Area areaBoar = new Area();
+            areaBoar.SetInitialArea();
+            areaBoar.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaBoar);
+
             var characters = new List<ACharacter>(){
                
                 characterFactory.CreateCharacter<Knight>(areaKnihgt, "Aragorn"),
                 characterFactory.CreateCharacter<Princess>(areaKPrincess,"Arwen"),
                 characterFactory.CreateCharacter<Soldier>(areaSoldier,"Gimli"),
-                characterFactory.CreateCharacter<Archer>(areaArcher,"Legolas")
+                characterFactory.CreateCharacter<Archer>(areaArcher,"Legolas"),                
+                characterFactory.CreateCharacter<Soldier>(areaRabbit,"Buggs Bunny"),
+                characterFactory.CreateCharacter<Soldier>(areaBoar,"Pumba")
             };
         }
     }
