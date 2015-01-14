@@ -28,11 +28,17 @@ namespace Tamagochi
         public List<Area> arrayAreas = new List<Area>();
         Area areaKnihgt;
         Area areaArcher;
+        Area areaSoldier;
+        Area areaKPrincess;
+        Area areaElephant1;
+        Area areaElephant2;
+        Area areaElephant3;
         Image imageKnight = new Image();
         Image imageSoldier = new Image();
         Image imageArcher = new Image();
-        Image imageRabbit = new Image();
-        Image imageBoar = new Image();
+        Image imageElephant1 = new Image();
+        Image imageElephant2 = new Image();
+        Image imageElephant3 = new Image();
         public MainWindow()
         {
             InitializeComponent();
@@ -42,12 +48,12 @@ namespace Tamagochi
             arrayAreas.Add(areaKnihgt);
             
 
-            Area areaKPrincess = new Area();
+            areaKPrincess = new Area();
             areaKPrincess.SetInitialArea();
             areaKPrincess.ModifyAreaIfExist(arrayAreas);
             arrayAreas.Add(areaKPrincess);
 
-            Area areaSoldier = new Area();
+            areaSoldier = new Area();
             areaSoldier.SetInitialArea();
             areaSoldier.ModifyAreaIfExist(arrayAreas);
             arrayAreas.Add(areaSoldier);
@@ -57,31 +63,40 @@ namespace Tamagochi
             areaArcher.ModifyAreaIfExist(arrayAreas);
             arrayAreas.Add(areaArcher);
 
-            Area areaRabbit = new Area();
-            areaRabbit.SetInitialArea();
-            areaRabbit.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaRabbit);
+            
+            areaElephant1 = new Area();
+            areaElephant1.SetInitialArea();
+            areaElephant1.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaElephant1);
 
-            Area areaBoar = new Area();
-            areaBoar.SetInitialArea();
-            areaBoar.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaBoar);
+            areaElephant2 = new Area();
+            areaElephant2.SetInitialArea();
+            areaElephant2.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaElephant2);
+
+            areaElephant3 = new Area();
+            areaElephant3.SetInitialArea();
+            areaElephant3.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaElephant3);
 
             var characters = new List<ACharacter>(){
                
                 characterFactory.CreateCharacter<Knight>(areaKnihgt, "Aragorn"),
                 characterFactory.CreateCharacter<Princess>(areaKPrincess,"Arwen"),
                 characterFactory.CreateCharacter<Soldier>(areaSoldier,"Gimli"),
-                characterFactory.CreateCharacter<Archer>(areaArcher,"Legolas"),                
-                characterFactory.CreateCharacter<Soldier>(areaRabbit,"Buggs Bunny"),
-                characterFactory.CreateCharacter<Soldier>(areaBoar,"Pumba")
+                characterFactory.CreateCharacter<Archer>(areaArcher,"Legolas"),
+                characterFactory.CreateCharacter<Archer>(areaElephant1,"Elephant1"),
+                characterFactory.CreateCharacter<Archer>(areaElephant2,"Elephant2"),
+                characterFactory.CreateCharacter<Archer>(areaElephant3,"Elephant3")
+       
             };
             string a=System.IO.Directory.GetCurrentDirectory();
             CreateImage(imageKnight,areaKnihgt, Directory.GetCurrentDirectory()+@".\..\..\Images\knight.gif");
             CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @"\..\..\Images\soldier.gif");
             CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @"\..\..\Images\archer.gif");
-            CreateImage(imageRabbit, areaRabbit, Directory.GetCurrentDirectory() + @"\..\..\Images\rabbit.gif");
-            CreateImage(imageBoar, areaBoar, Directory.GetCurrentDirectory() + @"\..\..\Images\boar.gif");
+            CreateImage(imageElephant1, areaElephant1, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
+            CreateImage(imageElephant2, areaElephant2, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
+            CreateImage(imageElephant3, areaElephant3, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
 
         }
 
@@ -106,6 +121,7 @@ namespace Tamagochi
         {
             grid.Children.Remove(imageKnight);
             grid.Children.Remove(imageArcher);
+            grid.Children.Remove(imageSoldier);
             if (e.Key == Key.Up)
             {
                 if (areaKnihgt.Row > 0)
@@ -148,8 +164,30 @@ namespace Tamagochi
                     areaArcher.Column += 1;
             }
 
+            if (e.Key == Key.Z)
+            {
+                if (areaSoldier.Row > 0)
+                    areaSoldier.Row -= 1;
+            }
+            if (e.Key == Key.S)
+            {
+                if (areaSoldier.Row < 9)
+                    areaSoldier.Row += 1;
+            }
+            if (e.Key == Key.Q)
+            {
+                if (areaSoldier.Column > 0)
+                    areaSoldier.Column -= 1;
+            }
+            if (e.Key == Key.D)
+            {
+                if (areaSoldier.Column < 9)
+                    areaSoldier.Column += 1;
+            }
+
             CreateImage(imageKnight, areaKnihgt, Directory.GetCurrentDirectory() + @".\..\..\Images\knight.gif");
             CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @".\..\..\Images\archer.gif");
+            CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @".\..\..\Images\soldier.gif");
         }
        
 

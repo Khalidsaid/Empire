@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Adventure.Library.Characters.Factories
 {
-    public enum CharacterClass { Knight, Archer, Soldier, Princess, Rabbit, Boar }
+    public enum CharacterClass { Knight, Archer, Soldier, Princess, Rabbit, Boar,Elephant }
 
     public class CharacterFactory
     {
@@ -46,9 +46,11 @@ namespace Adventure.Library.Characters.Factories
             if (typeof(T) == typeof(Princess))
                 return new Princess(organisation, name);
             if (typeof(T) == typeof(Rabbit))
-                return new Princess(organisation, name); 
+                return new Rabbit(organisation, name);
             if (typeof(T) == typeof(Boar))
-                return new Princess(organisation, name);
+                return new Boar(organisation, name); 
+            if (typeof(T) == typeof(Elephant))
+                return new Elephant(organisation, name);
 
             throw new ArgumentException();
         }
@@ -75,7 +77,9 @@ namespace Adventure.Library.Characters.Factories
                 case CharacterClass.Rabbit:
                     return new Rabbit(organisation, name);
                 case CharacterClass.Boar:
-                    return new Rabbit(organisation, name);
+                    return new Boar(organisation, name);
+                case CharacterClass.Elephant:
+                    return new Elephant(organisation, name);
                 default: throw new ArgumentException();
             }
         }
@@ -100,9 +104,11 @@ namespace Adventure.Library.Characters.Factories
             if (typeof(T) == typeof(Princess))
                 return new Princess(area, name);
             if (typeof(T) == typeof(Rabbit))
-                return new Princess(area, name);
+                return new Rabbit(area, name);
             if (typeof(T) == typeof(Boar))
-                return new Princess(area, name);
+                return new Boar(area, name);
+            if (typeof(T) == typeof(Elephant))
+                return new Elephant(area, name);
 
             throw new ArgumentException();
         }

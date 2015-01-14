@@ -8,3 +8,8 @@ C:\Users\Eric NARA\Desktop\Empire\Adventure.Library\bin\Debug\Character.Library.
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Library\obj\Debug\Adventure.Library.csprojResolveAssemblyReference.cache
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Library\obj\Debug\Character.Library.dll
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Library\obj\Debug\Character.Library.pdb
+C:\Users\Aroune\Desktop\Empire\Adventure.Library\bin\Debug\Character.Library.dll
+C:\Users\Aroune\Desktop\Empire\Adventure.Library\bin\Debug\Character.Library.pdb
+C:\Users\Aroune\Desktop\Empire\Adventure.Library\obj\Debug\Adventure.Library.csprojResolveAssemblyReference.cache
+C:\Users\Aroune\Desktop\Empire\Adventure.Library\obj\Debug\Character.Library.dll
+C:\Users\Aroune\Desktop\Empire\Adventure.Library\obj\Debug\Character.Library.pdb
