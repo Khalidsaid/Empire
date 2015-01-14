@@ -27,6 +27,7 @@ namespace Tamagochi
 
         public List<Area> arrayAreas = new List<Area>();
         Area areaKnihgt;
+        Area areaArcher;
         Image imageKnight = new Image();
         Image imageSoldier = new Image();
         Image imageArcher = new Image();
@@ -51,7 +52,7 @@ namespace Tamagochi
             areaSoldier.ModifyAreaIfExist(arrayAreas);
             arrayAreas.Add(areaSoldier);
 
-            Area areaArcher = new Area();
+            areaArcher = new Area();
             areaArcher.SetInitialArea();
             areaArcher.ModifyAreaIfExist(arrayAreas);
             arrayAreas.Add(areaArcher);
@@ -104,6 +105,7 @@ namespace Tamagochi
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             grid.Children.Remove(imageKnight);
+            grid.Children.Remove(imageArcher);
             if (e.Key == Key.Up)
             {
                 if (areaKnihgt.Row > 0)
@@ -124,7 +126,30 @@ namespace Tamagochi
                 if (areaKnihgt.Column < 9)
                     areaKnihgt.Column += 1;
             }
+
+            if (e.Key == Key.NumPad5)
+            {
+                if (areaArcher.Row > 0)
+                    areaArcher.Row -= 1;
+            }
+            if (e.Key == Key.NumPad2)
+            {
+                if (areaArcher.Row < 9)
+                    areaArcher.Row += 1;
+            }
+            if (e.Key == Key.NumPad1)
+            {
+                if (areaArcher.Column > 0)
+                    areaArcher.Column -= 1;
+            }
+            if (e.Key == Key.NumPad3)
+            {
+                if (areaArcher.Column < 9)
+                    areaArcher.Column += 1;
+            }
+
             CreateImage(imageKnight, areaKnihgt, Directory.GetCurrentDirectory() + @".\..\..\Images\knight.gif");
+            CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @".\..\..\Images\archer.gif");
         }
        
 
