@@ -33,13 +33,14 @@ namespace Tamagochi
         Area areaKnihgt;
         Area areaArcher;
         Area areaSoldier;
-        Area areaKPrincess;
+        Area areaPrincess;
         Area areaElephant1;
         Area areaElephant2;
         Area areaElephant3;
         Image imageKnight = new Image();
         Image imageSoldier = new Image();
         Image imageArcher = new Image();
+        Image imagePrincess = new Image();
         Image imageElephant1 = new Image();
         Image imageElephant2 = new Image();
         Image imageElephant3 = new Image();
@@ -53,12 +54,12 @@ namespace Tamagochi
             areaKnihgt = new Area();
             areaKnihgt.SetInitialArea();
             arrayAreas.Add(areaKnihgt);
-            
 
-            areaKPrincess = new Area();
-            areaKPrincess.SetInitialArea();
-            areaKPrincess.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaKPrincess);
+
+            areaPrincess = new Area();
+            areaPrincess.SetInitialArea();
+            areaPrincess.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaPrincess);
 
             areaSoldier = new Area();
             areaSoldier.SetInitialArea();
@@ -95,7 +96,7 @@ namespace Tamagochi
             var characters = new List<ACharacter>(){
                
                 characterFactory.CreateCharacter<Knight>(areaKnihgt, "Aragorn"),
-                characterFactory.CreateCharacter<Princess>(areaKPrincess,"Arwen"),
+                characterFactory.CreateCharacter<Princess>(areaPrincess,"Arwen"),
                 characterFactory.CreateCharacter<Soldier>(areaSoldier,"Gimli"),
                 characterFactory.CreateCharacter<Archer>(areaArcher,"Legolas"),
                 characterFactory.CreateCharacter<Archer>(areaElephant1,"Elephant1"),
@@ -107,6 +108,7 @@ namespace Tamagochi
             CreateImage(imageKnight,areaKnihgt, Directory.GetCurrentDirectory()+@".\..\..\Images\knight.gif");
             CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @"\..\..\Images\soldier.gif");
             CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @"\..\..\Images\archer.gif");
+            CreateImage(imagePrincess, areaPrincess, Directory.GetCurrentDirectory() + @"\..\..\Images\king.png");
             CreateImage(imageElephant1, areaElephant1, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
             CreateImage(imageElephant2, areaElephant2, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
             CreateImage(imageElephant3, areaElephant3, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
