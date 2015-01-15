@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Adventure.Library
 {
-   
-   public class Area
+
+    public class Area
     {
-       public int Row { get; set; }
-       public int Column { get; set; }
+        public int Row { get; set; }
+        public int Column { get; set; }
 
         public Area(int row, int column)
         {
@@ -17,8 +17,9 @@ namespace Adventure.Library
             Column = column;
         }
         public Area()
-        {            
+        {
         }
+       
 
         public void SetInitialArea()
         {
@@ -29,6 +30,11 @@ namespace Adventure.Library
             this.Column = column;
         }
 
+        public void KillArea()
+        {
+            this.Row = 99;
+            this.Column = 99;
+        }
 
         public void ModifyAreaIfExist(List<Area> arrayAreas)
         {
@@ -40,7 +46,7 @@ namespace Adventure.Library
                 }
             }
         }
-
         
     }
+    
 }

@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +62,7 @@
     <Compile Include="Environments\Zones\IZone.cs" />
     <Compile Include="Environments\Outlets\Outlet.cs" />
     <Compile Include="Environments\Zones\Zone.cs" />
+    <Compile Include="Fight\Fight.cs" />
     <Compile Include="Gameboards\IGameboard.cs" />
     <Compile Include="Gameboards\Factories\IGameboardFactory.cs" />
     <Compile Include="Gameboards\Factories\GameboardFactory.cs" />

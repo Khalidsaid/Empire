@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using Adventure.Library.Fight;
 
 namespace Tamagochi
 {
@@ -26,6 +27,9 @@ namespace Tamagochi
     {
 
         public List<Area> arrayAreas = new List<Area>();
+        public List<Area> arrayAreasElephant = new List<Area>();
+        public List<Area> arrayAreasArmee = new List<Area>();
+        
         Area areaKnihgt;
         Area areaArcher;
         Area areaSoldier;
@@ -39,9 +43,12 @@ namespace Tamagochi
         Image imageElephant1 = new Image();
         Image imageElephant2 = new Image();
         Image imageElephant3 = new Image();
+        Fight fight = new Fight();
+
         public MainWindow()
         {
             InitializeComponent();
+            
             var characterFactory = new CharacterFactory();
             areaKnihgt = new Area();
             areaKnihgt.SetInitialArea();
@@ -78,6 +85,12 @@ namespace Tamagochi
             areaElephant3.SetInitialArea();
             areaElephant3.ModifyAreaIfExist(arrayAreas);
             arrayAreas.Add(areaElephant3);
+            arrayAreasElephant.Add(areaElephant1);
+            arrayAreasElephant.Add(areaElephant2);
+            arrayAreasElephant.Add(areaElephant3);
+            arrayAreasArmee.Add(areaKnihgt);
+            arrayAreasArmee.Add(areaSoldier);
+            arrayAreasArmee.Add(areaArcher);
 
             var characters = new List<ACharacter>(){
                
@@ -98,6 +111,7 @@ namespace Tamagochi
             CreateImage(imageElephant2, areaElephant2, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
             CreateImage(imageElephant3, areaElephant3, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
 
+
         }
 
         public void CreateImage(Image image, Area area,String imgUrl)
@@ -109,12 +123,6 @@ namespace Tamagochi
             Grid.SetRow(image, area.Row);
             Grid.SetColumn(image, area.Column);
             grid.Children.Add(image);
-        }
-
-        public void Move(Area area,int row,int column)
-        {
-            area.Row += 1;
-            area.Column += 1;
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -184,13 +192,50 @@ namespace Tamagochi
                 if (areaSoldier.Column < 9)
                     areaSoldier.Column += 1;
             }
-
             CreateImage(imageKnight, areaKnihgt, Directory.GetCurrentDirectory() + @".\..\..\Images\knight.gif");
             CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @".\..\..\Images\archer.gif");
             CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @".\..\..\Images\soldier.gif");
-        }
-       
 
+            if (fight.Kill(areaElephant1, arrayAreasArmee) != null)
+            {
+                grid.Children.Remove(imageElephant1);
+                if (areaArcher == fight.Kill(areaElephant1, arrayAreasArmee))
+                    labelArcher.Content = Convert.ToInt16(labelArcher.Content) + 1; 
+                else if(areaSoldier == fight.Kill(areaElephant1, arrayAreasArmee))
+                    labelSoldier.Content = Convert.ToInt16(labelSoldier.Content) + 1;
+                else if (areaKnihgt == fight.Kill(areaElephant1, arrayAreasArmee))
+                    labelKnight.Content = Convert.ToInt16(labelKnight.Content) + 1;
+                areaElephant1.KillArea();
+                
+            }
+            if (fight.Kill(areaElephant2, arrayAreasArmee) != null)
+            {
+                if (areaArcher == fight.Kill(areaElephant2, arrayAreasArmee))
+                    labelArcher.Content = Convert.ToInt16(labelArcher.Content) + 1;
+                else if (areaSoldier == fight.Kill(areaElephant2, arrayAreasArmee))
+                    labelSoldier.Content = Convert.ToInt16(labelSoldier.Content) + 1;
+                else if (areaKnihgt == fight.Kill(areaElephant2, arrayAreasArmee))
+                    labelKnight.Content = Convert.ToInt16(labelKnight.Content) + 1;
+                grid.Children.Remove(imageElephant2);
+                areaElephant2.KillArea(); 
+            }
+            if (fight.Kill(areaElephant3, arrayAreasArmee) != null)
+            {
+                grid.Children.Remove(imageElephant3);
+                if (areaArcher == fight.Kill(areaElephant3, arrayAreasArmee))
+                    labelArcher.Content = Convert.ToInt16(labelArcher.Content) + 1;
+                else if (areaSoldier == fight.Kill(areaElephant3, arrayAreasArmee))
+                    labelSoldier.Content = Convert.ToInt16(labelSoldier.Content) + 1;
+                else if (areaKnihgt == fight.Kill(areaElephant3, arrayAreasArmee))
+                    labelKnight.Content = Convert.ToInt16(labelKnight.Content) + 1;
+                areaElephant3.KillArea(); 
+            }
+            
+            
+        }
+
+       
+        
      
        
     }

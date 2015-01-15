@@ -8,12 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/background.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/background1.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/build.gif")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/building2.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/house.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/pelouse.jpeg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/villageois.gif")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/meat.gif")]
 
 
