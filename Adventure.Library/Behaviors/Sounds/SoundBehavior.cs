@@ -30,6 +30,14 @@ namespace Adventure.Library.Behaviors.Sounds
         }
     }
 
+    public partial class KingSpeak : ASoundBehavior
+    {
+        public override string Execute()
+        {
+            return "Apporter moi à manger !!!";
+        }
+    }
+
     public partial class Speak : ASoundBehavior
     {
         public override string Execute()

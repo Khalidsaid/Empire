@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Adventure.Library.Characters.Factories
 {
-    public enum CharacterClass { Knight, Archer, Soldier, Princess, Rabbit, Boar,Elephant }
+    public enum CharacterClass { Knight, Archer, Soldier, Princess, Rabbit, Boar,Elephant, King }
 
     public class CharacterFactory
     {
@@ -51,6 +51,8 @@ namespace Adventure.Library.Characters.Factories
                 return new Boar(organisation, name); 
             if (typeof(T) == typeof(Elephant))
                 return new Elephant(organisation, name);
+            if (typeof(T) == typeof(King))
+                return new King(organisation, name);
 
             throw new ArgumentException();
         }
@@ -68,6 +70,8 @@ namespace Adventure.Library.Characters.Factories
             {
                 case CharacterClass.Archer :
                     return new Archer(organisation, name);
+                case CharacterClass.King:
+                    return new King(organisation, name);
                 case CharacterClass.Knight:
                     return new Knight(organisation, name);
                 case CharacterClass.Soldier:
@@ -97,6 +101,8 @@ namespace Adventure.Library.Characters.Factories
         {
             if (typeof(T) == typeof(Knight))
                 return new Knight(area, name);
+            if (typeof(T) == typeof(King))
+                return new King(area, name);
             if (typeof(T) == typeof(Archer))
                 return new Archer(area, name);
             if (typeof(T) == typeof(Soldier))

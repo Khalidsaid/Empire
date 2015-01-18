@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Adventure.Library.Fight;
+using System.Windows.Threading;
 
 namespace Tamagochi
 {
@@ -29,7 +30,8 @@ namespace Tamagochi
         public List<Area> arrayAreas = new List<Area>();
         public List<Area> arrayAreasElephant = new List<Area>();
         public List<Area> arrayAreasArmee = new List<Area>();
-        
+
+        Area areaKing;
         Area areaKnihgt;
         Area areaArcher;
         Area areaSoldier;
@@ -37,6 +39,7 @@ namespace Tamagochi
         Area areaElephant1;
         Area areaElephant2;
         Area areaElephant3;
+        Image imageKing = new Image();
         Image imageKnight = new Image();
         Image imageSoldier = new Image();
         Image imageArcher = new Image();
@@ -46,10 +49,18 @@ namespace Tamagochi
         Image imageElephant3 = new Image();
         Fight fight = new Fight();
 
+        DispatcherTimer _timer;
+        TimeSpan _time = TimeSpan.FromSeconds(20);
+
         public MainWindow()
         {
             InitializeComponent();
-            
+          
+
+            _timer = new DispatcherTimer();
+            _timer.Interval = new TimeSpan(0, 0, 1);
+            _timer.Tick += _timer_Tick;
+
             var characterFactory = new CharacterFactory();
             areaKnihgt = new Area();
             areaKnihgt.SetInitialArea();
@@ -71,7 +82,12 @@ namespace Tamagochi
             areaArcher.ModifyAreaIfExist(arrayAreas);
             arrayAreas.Add(areaArcher);
 
-            
+            areaKing = new Area();
+            areaKing.SetInitialArea();
+            areaKing.ModifyAreaIfExist(arrayAreas);
+            arrayAreas.Add(areaKing);
+
+
             areaElephant1 = new Area();
             areaElephant1.SetInitialArea();
             areaElephant1.ModifyAreaIfExist(arrayAreas);
@@ -99,24 +115,38 @@ namespace Tamagochi
                 characterFactory.CreateCharacter<Princess>(areaPrincess,"Arwen"),
                 characterFactory.CreateCharacter<Soldier>(areaSoldier,"Gimli"),
                 characterFactory.CreateCharacter<Archer>(areaArcher,"Legolas"),
+                characterFactory.CreateCharacter<King>(areaKing,"Leonidas"),
                 characterFactory.CreateCharacter<Archer>(areaElephant1,"Elephant1"),
                 characterFactory.CreateCharacter<Archer>(areaElephant2,"Elephant2"),
                 characterFactory.CreateCharacter<Archer>(areaElephant3,"Elephant3")
-       
             };
-            string a=System.IO.Directory.GetCurrentDirectory();
-            CreateImage(imageKnight,areaKnihgt, Directory.GetCurrentDirectory()+@".\..\..\Images\knight.gif");
+            
+            CreateImage(imageKnight, areaKnihgt, Directory.GetCurrentDirectory() + @".\..\..\Images\knight.gif");
             CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @"\..\..\Images\soldier.gif");
             CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @"\..\..\Images\archer.gif");
-            CreateImage(imagePrincess, areaPrincess, Directory.GetCurrentDirectory() + @"\..\..\Images\king.png");
+            CreateImage(imageKing, areaKing, Directory.GetCurrentDirectory() + @"\..\..\Images\king.png");
             CreateImage(imageElephant1, areaElephant1, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
             CreateImage(imageElephant2, areaElephant2, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
             CreateImage(imageElephant3, areaElephant3, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
 
 
+            _timer.Start();
+
         }
 
-        public void CreateImage(Image image, Area area,String imgUrl)
+        void _timer_Tick(object sender, EventArgs e)
+        {
+            label1.Content = _time.ToString("c");
+            if (_time.Seconds == 0)
+            {
+                _timer.Stop();                
+                isKingAlive();
+            }
+            else
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+        }
+
+        public void CreateImage(Image image, Area area, String imgUrl)
         {
             image.Width = 50;
             image.Height = 50;
@@ -198,18 +228,19 @@ namespace Tamagochi
             CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @".\..\..\Images\archer.gif");
             CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @".\..\..\Images\soldier.gif");
 
+
             if (fight.Kill(areaElephant1, arrayAreasArmee) != null)
             {
                 grid.Children.Remove(imageElephant1);
                 if (areaArcher == fight.Kill(areaElephant1, arrayAreasArmee))
-                    labelArcher.Content = Convert.ToInt16(labelArcher.Content) + 1; 
-                else if(areaSoldier == fight.Kill(areaElephant1, arrayAreasArmee))
+                    labelArcher.Content = Convert.ToInt16(labelArcher.Content) + 1;
+                else if (areaSoldier == fight.Kill(areaElephant1, arrayAreasArmee))
                     labelSoldier.Content = Convert.ToInt16(labelSoldier.Content) + 1;
                 else if (areaKnihgt == fight.Kill(areaElephant1, arrayAreasArmee))
                     labelKnight.Content = Convert.ToInt16(labelKnight.Content) + 1;
                 areaElephant1.KillArea();
-                
             }
+
             if (fight.Kill(areaElephant2, arrayAreasArmee) != null)
             {
                 if (areaArcher == fight.Kill(areaElephant2, arrayAreasArmee))
@@ -219,8 +250,9 @@ namespace Tamagochi
                 else if (areaKnihgt == fight.Kill(areaElephant2, arrayAreasArmee))
                     labelKnight.Content = Convert.ToInt16(labelKnight.Content) + 1;
                 grid.Children.Remove(imageElephant2);
-                areaElephant2.KillArea(); 
+                areaElephant2.KillArea();
             }
+
             if (fight.Kill(areaElephant3, arrayAreasArmee) != null)
             {
                 grid.Children.Remove(imageElephant3);
@@ -230,15 +262,51 @@ namespace Tamagochi
                     labelSoldier.Content = Convert.ToInt16(labelSoldier.Content) + 1;
                 else if (areaKnihgt == fight.Kill(areaElephant3, arrayAreasArmee))
                     labelKnight.Content = Convert.ToInt16(labelKnight.Content) + 1;
-                areaElephant3.KillArea(); 
+                areaElephant3.KillArea();
             }
-            
-            
+
+            if (fight.Kill(areaKing, arrayAreasArmee) != null)
+            {
+                if (areaArcher == fight.Kill(areaKing, arrayAreasArmee))
+                {
+                    if (Convert.ToInt16(labelArcher.Content) > 0)
+                    {
+                        labelKing.Content = Convert.ToInt16(labelKing.Content) + Convert.ToInt16(labelArcher.Content);
+                        labelArcher.Content = 0;
+                    }
+                }
+                else if (areaSoldier == fight.Kill(areaKing, arrayAreasArmee))
+                {
+                    if (Convert.ToInt16(labelSoldier.Content) > 0)
+                    {
+                        labelKing.Content = Convert.ToInt16(labelKing.Content) + Convert.ToInt16(labelSoldier.Content);
+                        labelSoldier.Content = 0;
+                    }
+                }
+                else if (areaKnihgt == fight.Kill(areaKing, arrayAreasArmee))
+                {
+                    if (Convert.ToInt16(labelKnight.Content) > 0)
+                    {
+                        labelKing.Content = Convert.ToInt16(labelKing.Content) + Convert.ToInt16(labelKnight.Content);
+                        labelKnight.Content = 0;
+                    }
+                }
+            }
         }
 
-       
-        
-     
-       
+
+        public void isKingAlive()
+        {            
+            bool mort = false;
+            int x = _time.Seconds;
+
+            if (x == 0)
+            {
+                mort = true;
+                MessageBox.Show("Le roi est mort");
+            }
+            else if (x == 4)
+                mort = false;
+        }
     }
 }

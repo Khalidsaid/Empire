@@ -50,6 +50,7 @@
     <Compile Include="Characters\Boar.cs" />
     <Compile Include="Characters\Elephant.cs" />
     <Compile Include="Characters\Factories\CharacterFactory.cs" />
+    <Compile Include="Characters\King.cs" />
     <Compile Include="Characters\Knight.cs" />
     <Compile Include="Characters\Princess.cs" />
     <Compile Include="Characters\Rabbit.cs" />
