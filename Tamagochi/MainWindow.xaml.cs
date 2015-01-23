@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Adventure.Library.Fight;
+using Adventure.Library.Games;
 using System.Windows.Threading;
 
 namespace Tamagochi
@@ -26,28 +27,30 @@ namespace Tamagochi
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        public GameEnvironment gameEnvironnement = new GameEnvironment();
+        CharacterFactory charactereFactory;
         public List<Area> arrayAreas = new List<Area>();
         public List<Area> arrayAreasElephant = new List<Area>();
         public List<Area> arrayAreasArmee = new List<Area>();
 
-        Area areaKing;
-        Area areaKnihgt;
-        Area areaArcher;
-        Area areaSoldier;
-        Area areaPrincess;
-        Area areaElephant1;
-        Area areaElephant2;
-        Area areaElephant3;
+        Area areaKing= new Area();
+        Area areaKnihgt= new Area();
+        Area areaArcher= new Area();
+        Area areaSoldier= new Area();
+        Area areaElephant1= new Area();
+        Area areaElephant2= new Area();
+        Area areaElephant3= new Area();
         Image imageKing = new Image();
         Image imageKnight = new Image();
         Image imageSoldier = new Image();
         Image imageArcher = new Image();
-        Image imagePrincess = new Image();
         Image imageElephant1 = new Image();
         Image imageElephant2 = new Image();
         Image imageElephant3 = new Image();
         Fight fight = new Fight();
+        bool mort = false;
+        int objectif = 2;
+
 
         DispatcherTimer _timer;
         TimeSpan _time = TimeSpan.FromSeconds(20);
@@ -55,79 +58,23 @@ namespace Tamagochi
         public MainWindow()
         {
             InitializeComponent();
-          
+            objectif = gameEnvironnement.SetObjectif();
+
+            labelnbe.Content = objectif;
 
             _timer = new DispatcherTimer();
             _timer.Interval = new TimeSpan(0, 0, 1);
             _timer.Tick += _timer_Tick;
 
-            var characterFactory = new CharacterFactory();
-            areaKnihgt = new Area();
-            areaKnihgt.SetInitialArea();
-            arrayAreas.Add(areaKnihgt);
+            gameEnvironnement.CreateGame(charactereFactory, areaKnihgt, areaSoldier, areaArcher, areaKing, areaElephant1, areaElephant2, areaElephant3, arrayAreas, arrayAreasArmee, arrayAreasElephant);
 
-
-            areaPrincess = new Area();
-            areaPrincess.SetInitialArea();
-            areaPrincess.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaPrincess);
-
-            areaSoldier = new Area();
-            areaSoldier.SetInitialArea();
-            areaSoldier.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaSoldier);
-
-            areaArcher = new Area();
-            areaArcher.SetInitialArea();
-            areaArcher.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaArcher);
-
-            areaKing = new Area();
-            areaKing.SetInitialArea();
-            areaKing.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaKing);
-
-
-            areaElephant1 = new Area();
-            areaElephant1.SetInitialArea();
-            areaElephant1.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaElephant1);
-
-            areaElephant2 = new Area();
-            areaElephant2.SetInitialArea();
-            areaElephant2.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaElephant2);
-
-            areaElephant3 = new Area();
-            areaElephant3.SetInitialArea();
-            areaElephant3.ModifyAreaIfExist(arrayAreas);
-            arrayAreas.Add(areaElephant3);
-            arrayAreasElephant.Add(areaElephant1);
-            arrayAreasElephant.Add(areaElephant2);
-            arrayAreasElephant.Add(areaElephant3);
-            arrayAreasArmee.Add(areaKnihgt);
-            arrayAreasArmee.Add(areaSoldier);
-            arrayAreasArmee.Add(areaArcher);
-
-            var characters = new List<ACharacter>(){
-               
-                characterFactory.CreateCharacter<Knight>(areaKnihgt, "Aragorn"),
-                characterFactory.CreateCharacter<Princess>(areaPrincess,"Arwen"),
-                characterFactory.CreateCharacter<Soldier>(areaSoldier,"Gimli"),
-                characterFactory.CreateCharacter<Archer>(areaArcher,"Legolas"),
-                characterFactory.CreateCharacter<King>(areaKing,"Leonidas"),
-                characterFactory.CreateCharacter<Archer>(areaElephant1,"Elephant1"),
-                characterFactory.CreateCharacter<Archer>(areaElephant2,"Elephant2"),
-                characterFactory.CreateCharacter<Archer>(areaElephant3,"Elephant3")
-            };
-            
             CreateImage(imageKnight, areaKnihgt, Directory.GetCurrentDirectory() + @".\..\..\Images\knight.gif");
-            CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @"\..\..\Images\soldier.gif");
             CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @"\..\..\Images\archer.gif");
             CreateImage(imageKing, areaKing, Directory.GetCurrentDirectory() + @"\..\..\Images\king.png");
             CreateImage(imageElephant1, areaElephant1, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
             CreateImage(imageElephant2, areaElephant2, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
             CreateImage(imageElephant3, areaElephant3, Directory.GetCurrentDirectory() + @"\..\..\Images\elephant.gif");
+            CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @"\..\..\Images\soldier.gif");
 
 
             _timer.Start();
@@ -139,8 +86,8 @@ namespace Tamagochi
             label1.Content = _time.ToString("c");
             if (_time.Seconds == 0)
             {
-                _timer.Stop();                
-                isKingAlive();
+                _timer.Stop();
+                IsKingAlive();
             }
             else
                 _time = _time.Add(TimeSpan.FromSeconds(-1));
@@ -159,9 +106,12 @@ namespace Tamagochi
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            if (_time.Seconds == 0)
+                return;
             grid.Children.Remove(imageKnight);
             grid.Children.Remove(imageArcher);
             grid.Children.Remove(imageSoldier);
+
             if (e.Key == Key.Up)
             {
                 if (areaKnihgt.Row > 0)
@@ -228,7 +178,7 @@ namespace Tamagochi
             CreateImage(imageArcher, areaArcher, Directory.GetCurrentDirectory() + @".\..\..\Images\archer.gif");
             CreateImage(imageSoldier, areaSoldier, Directory.GetCurrentDirectory() + @".\..\..\Images\soldier.gif");
 
-
+            
             if (fight.Kill(areaElephant1, arrayAreasArmee) != null)
             {
                 grid.Children.Remove(imageElephant1);
@@ -292,21 +242,42 @@ namespace Tamagochi
                     }
                 }
             }
+
+        }
+       
+
+        public bool IsKingAlive()
+        {
+            if (_time.Seconds == 0)
+            {
+
+                if (Convert.ToInt16(labelKing.Content) != objectif)
+                {
+                    LabelGameOver.Content = "Game Over";
+                    mort = true;
+                }
+                else
+                {
+                    LabelGameOver.Content="Success";
+                    mort = false;
+                }
+                LabelGameOver.Visibility = Visibility.Visible;
+                Button1.Visibility = Visibility.Visible;
+            }
+            mort=false;
+            return mort;
         }
 
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            LabelGameOver.Visibility = Visibility.Hidden;
+            Button1.Visibility = Visibility.Hidden;
+            arrayAreasArmee.Clear();
+            arrayAreasElephant.Clear();
+            arrayAreas.Clear();
 
-        public void isKingAlive()
-        {            
-            bool mort = false;
-            int x = _time.Seconds;
-
-            if (x == 0)
-            {
-                mort = true;
-                MessageBox.Show("Le roi est mort");
-            }
-            else if (x == 4)
-                mort = false;
+            new MainWindow().WindowStartupLocation = this.WindowStartupLocation;
+            this.Close();
         }
     }
 }

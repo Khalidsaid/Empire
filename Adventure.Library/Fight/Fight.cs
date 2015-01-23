@@ -24,6 +24,8 @@ namespace Adventure.Library.Fight
             return null;
         }
 
+      
+
         public Area WhichArmee(Area a, List<Area> listAreaArmee)
         {
             foreach (var area in listAreaArmee)

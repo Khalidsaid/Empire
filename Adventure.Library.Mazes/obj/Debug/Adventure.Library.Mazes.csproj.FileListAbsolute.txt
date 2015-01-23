@@ -12,3 +12,17 @@ C:\Users\Eric NARA\Desktop\Empire\Adventure.Library.Mazes\bin\Debug\Character.Li
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.csprojResolveAssemblyReference.cache
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.dll
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Library.Mazes\bin\Debug\Adventure.Library.Mazes.dll
+C:\Users\a572195\Desktop\Empire-master\Adventure.Library.Mazes\bin\Debug\Adventure.Library.Mazes.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Library.Mazes\bin\Debug\Character.Library.dll
+C:\Users\a572195\Desktop\Empire-master\Adventure.Library.Mazes\bin\Debug\Character.Library.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.csprojResolveAssemblyReference.cache
+C:\Users\a572195\Desktop\Empire-master\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.dll
+C:\Users\a572195\Desktop\Empire-master\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library.Mazes\bin\Debug\Adventure.Library.Mazes.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library.Mazes\bin\Debug\Adventure.Library.Mazes.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library.Mazes\bin\Debug\Character.Library.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library.Mazes\bin\Debug\Character.Library.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.csprojResolveAssemblyReference.cache
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library.Mazes\obj\Debug\Adventure.Library.Mazes.pdb

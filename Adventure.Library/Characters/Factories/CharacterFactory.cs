@@ -11,6 +11,7 @@ namespace Adventure.Library.Characters.Factories
 
     public class CharacterFactory
     {
+
         /// <summary>
         /// Create a new ACharater with new() constraint
         /// new T() then set properties
@@ -45,10 +46,6 @@ namespace Adventure.Library.Characters.Factories
                 return new Soldier(organisation, name);
             if (typeof(T) == typeof(Princess))
                 return new Princess(organisation, name);
-            if (typeof(T) == typeof(Rabbit))
-                return new Rabbit(organisation, name);
-            if (typeof(T) == typeof(Boar))
-                return new Boar(organisation, name); 
             if (typeof(T) == typeof(Elephant))
                 return new Elephant(organisation, name);
             if (typeof(T) == typeof(King))
@@ -77,11 +74,7 @@ namespace Adventure.Library.Characters.Factories
                 case CharacterClass.Soldier:
                     return new Soldier(organisation, name);
                 case CharacterClass.Princess:
-                    return new Princess(organisation, name);
-                case CharacterClass.Rabbit:
-                    return new Rabbit(organisation, name);
-                case CharacterClass.Boar:
-                    return new Boar(organisation, name);
+                    return new Princess(organisation, name);              
                 case CharacterClass.Elephant:
                     return new Elephant(organisation, name);
                 default: throw new ArgumentException();
@@ -108,11 +101,7 @@ namespace Adventure.Library.Characters.Factories
             if (typeof(T) == typeof(Soldier))
                 return new Soldier(area, name);
             if (typeof(T) == typeof(Princess))
-                return new Princess(area, name);
-            if (typeof(T) == typeof(Rabbit))
-                return new Rabbit(area, name);
-            if (typeof(T) == typeof(Boar))
-                return new Boar(area, name);
+                return new Princess(area, name);           
             if (typeof(T) == typeof(Elephant))
                 return new Elephant(area, name);
 

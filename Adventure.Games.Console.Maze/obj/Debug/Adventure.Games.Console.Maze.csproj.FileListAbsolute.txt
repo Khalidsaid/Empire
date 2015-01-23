@@ -28,3 +28,23 @@ C:\Users\Eric NARA\Desktop\Empire\Adventure.Games.Console.Maze\bin\Debug\Charact
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.pdb
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Games.Console.Maze\bin\Debug\Character.Library.pdb
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.csprojResolveAssemblyReference.cache
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.exe.config
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.exe
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.dll
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Character.Library.dll
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Character.Library.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.csprojResolveAssemblyReference.cache
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.exe
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.exe.config
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.exe
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Games.Console.Maze.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Character.Library.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Adventure.Library.Mazes.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\bin\Debug\Character.Library.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.csprojResolveAssemblyReference.cache
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.exe
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.Console.Maze\obj\Debug\Adventure.Games.Console.Maze.pdb

@@ -18,3 +18,8 @@ C:\Users\a572195\Desktop\Empire-master\Adventure.Library\obj\Debug\Character.Lib
 C:\Users\a572195\Desktop\Empire-master\Adventure.Library\bin\Debug\Character.Library.dll
 C:\Users\a572195\Desktop\Empire-master\Adventure.Library\bin\Debug\Character.Library.pdb
 C:\Users\a572195\Desktop\Empire-master\Adventure.Library\obj\Debug\Character.Library.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library\bin\Debug\Character.Library.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library\bin\Debug\Character.Library.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library\obj\Debug\Adventure.Library.csprojResolveAssemblyReference.cache
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library\obj\Debug\Character.Library.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Library\obj\Debug\Character.Library.pdb

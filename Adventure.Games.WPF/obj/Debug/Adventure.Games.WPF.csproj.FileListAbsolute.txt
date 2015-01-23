@@ -21,3 +21,49 @@ C:\Users\Eric NARA\Desktop\Empire\Adventure.Games.WPF\obj\Debug\Adventure.Games.
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.csproj.GenerateResource.Cache
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.exe
 C:\Users\Eric NARA\Desktop\Empire\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Games.WPF.exe.config
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Games.WPF.exe
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Games.WPF.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Library.Mazes.dll
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Character.Library.dll
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Library.Mazes.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Character.Library.pdb
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.csprojResolveAssemblyReference.cache
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\MainGameStart.g.cs
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Views\Board.g.cs
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Views\Home.g.cs
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\App.g.cs
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF_MarkupCompile.cache
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF_MarkupCompile.lref
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\MainGameStart.baml
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Views\Board.baml
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Views\Home.baml
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.g.resources
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.Properties.Resources.resources
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.csproj.GenerateResource.Cache
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.exe
+C:\Users\a572195\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Games.WPF.exe.config
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Games.WPF.exe
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Games.WPF.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Library.Mazes.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Character.Library.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Adventure.Library.Mazes.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\bin\Debug\Character.Library.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.csprojResolveAssemblyReference.cache
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\MainGameStart.g.cs
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Views\Board.g.cs
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Views\Home.g.cs
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\App.g.cs
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF_MarkupCompile.cache
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF_MarkupCompile.lref
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\MainGameStart.baml
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Views\Board.baml
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Views\Home.baml
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.g.resources
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.Properties.Resources.resources
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.csproj.GenerateResource.Cache
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.exe
+C:\Users\Eric NARA\Desktop\Empire-master\Adventure.Games.WPF\obj\Debug\Adventure.Games.WPF.pdb

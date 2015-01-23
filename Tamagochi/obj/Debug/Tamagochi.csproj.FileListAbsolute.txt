@@ -58,3 +58,18 @@ C:\Users\Aroune\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi_MarkupCompil
 C:\Users\Aroune\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.g.resources
 C:\Users\Aroune\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.Properties.Resources.resources
 C:\Users\Aroune\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.csproj.GenerateResource.Cache
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\bin\Debug\Tamagochi.exe.config
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.exe
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\bin\Debug\Tamagochi.exe
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\bin\Debug\Tamagochi.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\bin\Debug\Character.Library.dll
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\bin\Debug\Character.Library.pdb
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.csprojResolveAssemblyReference.cache
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\MainWindow.baml
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\MainWindow.g.cs
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\App.g.cs
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi_MarkupCompile.cache
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.g.resources
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.Properties.Resources.resources
+C:\Users\Eric NARA\Desktop\Empire-master\Tamagochi\obj\Debug\Tamagochi.csproj.GenerateResource.Cache
